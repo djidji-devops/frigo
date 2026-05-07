@@ -197,15 +197,63 @@ footer{background:var(--dark2);border-top:1px solid rgba(56,189,248,.08);
 
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
-  .nav-addr,.nav-btns .b-map{display:none}
-  .stats{grid-template-columns:1fr;gap:2px}
-  .stat:first-child{border-radius:var(--radius) var(--radius) 0 0}
-  .stat:last-child{border-radius:0 0 var(--radius) var(--radius)}
-  footer{flex-direction:column;text-align:center}
-}
-@media(max-width:480px){
+  /* Nav */
+  .nav-addr{display:none}
+  nav{padding:10px 4%}
+  .nav-logo-badge{font-size:15px;padding:5px 11px}
+  .nav-btns a{padding:7px 11px;font-size:12px}
+  .nav-btns .b-map{display:none}
+
+  /* Hero */
+  .hero{padding:100px 6% 70px}
   .hero h1{font-size:2rem}
-  .nav-btns a{padding:7px 12px;font-size:12px}
+  .hero-sub{font-size:.95rem}
+  .hero-cta{flex-direction:column;align-items:center;gap:10px}
+  .btn-primary,.btn-outline{width:100%;max-width:300px;text-align:center}
+
+  /* Stats */
+  .stats{grid-template-columns:1fr 1fr;max-width:100%;margin-top:20px;padding:0 4%}
+  .stat{border-radius:0!important}
+  .stats .stat:first-child{border-radius:var(--radius) 0 0 0!important}
+  .stats .stat:nth-child(2){border-radius:0 var(--radius) 0 0!important}
+  .stats .stat:last-child{grid-column:span 2;border-radius:0 0 var(--radius) var(--radius)!important}
+
+  /* Sections */
+  section{padding:60px 5%}
+  .services-grid{grid-template-columns:1fr}
+  .svc-card{padding:26px 22px}
+
+  /* About */
+  .about{padding:60px 5%}
+  .about-inner p{font-size:.95rem}
+
+  /* Why */
+  .why-grid{grid-template-columns:1fr 1fr;gap:14px}
+  .why-card{padding:22px 16px}
+
+  /* Partner */
+  .partner{padding:50px 5%}
+  .partner-logo-row{gap:16px;margin:28px 0}
+  .partner-badge{padding:14px 22px;font-size:1.2rem}
+
+  /* CTA */
+  .cta-wrap{padding:60px 5%}
+  .cta{padding:40px 24px}
+  .cta h2{font-size:1.5rem}
+  .cta>div:last-child{flex-direction:column;align-items:center}
+  .cta .btn-primary,.cta .btn-outline{width:100%;max-width:280px;text-align:center}
+
+  /* Footer */
+  footer{flex-direction:column;text-align:center;gap:12px;padding:30px 5%}
+  .foot-links{justify-content:center;flex-wrap:wrap;gap:12px}
+}
+
+@media(max-width:420px){
+  .nav-btns .b-insta{display:none}
+  .hero h1{font-size:1.75rem}
+  .hero-badge{font-size:11px;padding:5px 12px}
+  .why-grid{grid-template-columns:1fr}
+  .stat-num{font-size:1.8rem}
 }
 </style>
 </head>
@@ -218,10 +266,10 @@ footer{background:var(--dark2);border-top:1px solid rgba(56,189,248,.08);
     <span class="nav-addr">📍 Vladimira Pavlovica 12A – Brović</span>
   </a>
   <div class="nav-btns">
-    <a href="tel:+381XXXXXXXX" class="b-call">📞 Poziv</a>
-    <a href="viber://chat?number=%2B381XXXXXXXX" class="b-viber">💜 Viber</a>
-    <a href="https://instagram.com/" target="_blank" class="b-insta">📷 Insta</a>
-    <a href="https://maps.google.com/?q=Vladimira+Pavlovica+12A+Brovic" target="_blank" class="b-map">🗺 Mapa</a>
+    <a href="tel:+3810643675742" class="b-call">📞 Poziv</a>
+    <a href="viber://chat?number=%2B3810643675742" class="b-viber">💜 Viber</a>
+    <a href="https://www.instagram.com/ni.kola1380/" target="_blank" class="b-insta">📷 Insta</a>
+    <a href="https://maps.google.com/?q=Vladimira+Pavlovica+12A+Obrenovac+Brovic" target="_blank" class="b-map">🗺 Mapa</a>
   </div>
 </nav>
 
@@ -235,7 +283,7 @@ footer{background:var(--dark2);border-top:1px solid rgba(56,189,248,.08);
     Projektovanje i izrada rashladnih komora po meri vaših potreba.
   </p>
   <div class="hero-cta">
-    <a href="tel:+381XXXXXXXX" class="btn-primary">📞 Pozovite nas</a>
+          <a href="tel:+3810643675742" class="btn-primary">📞 Pozovite nas</a>
     <a href="#usluge" class="btn-outline">Pogledajte usluge ↓</a>
   </div>
   <div class="scroll-ind">Skrolujte</div>
@@ -311,7 +359,7 @@ footer{background:var(--dark2);border-top:1px solid rgba(56,189,248,.08);
       našeg poslovanja. Kontaktirajte nas za sve informacije i konsultacije –
       tu smo da vam pružimo rešenje po meri vaših potreba.
     </p>
-    <a href="tel:+381XXXXXXXX" class="btn-primary" style="padding:12px 28px;font-size:14px">📞 Pozovite nas</a>
+    <a href="tel:+3810643675742" class="btn-primary" style="padding:12px 28px;font-size:14px">📞 Pozovite nas</a>
   </div>
 </div>
 
@@ -368,8 +416,8 @@ footer{background:var(--dark2);border-top:1px solid rgba(56,189,248,.08);
     <h2>Spremni smo da vam pomognemo</h2>
     <p>Pozovite nas ili pošaljite poruku putem Vibera – tu smo za sva pitanja i konsultacije.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="tel:+381XXXXXXXX" class="btn-primary">📞 Pozovite odmah</a>
-      <a href="viber://chat?number=%2B381XXXXXXXX" class="btn-outline">💜 Pišite na Viber</a>
+      <a href="tel:+3810643675742" class="btn-primary">📞 Pozovite odmah</a>
+      <a href="viber://chat?number=%2B3810643675742" class="btn-outline">💜 Pišite na Viber</a>
     </div>
   </div>
 </div>
@@ -379,10 +427,10 @@ footer{background:var(--dark2);border-top:1px solid rgba(56,189,248,.08);
   <div class="foot-logo">FRIGO NIDŽA</div>
   <div class="foot-copy">© 2025 Frigo Nidža · Vladimira Pavlovica 12A, Brović</div>
   <div class="foot-links">
-    <a href="tel:+381XXXXXXXX">Poziv</a>
-    <a href="viber://chat?number=%2B381XXXXXXXX">Viber</a>
-    <a href="https://instagram.com/" target="_blank">Instagram</a>
-    <a href="https://maps.google.com/?q=Vladimira+Pavlovica+12A+Brovic" target="_blank">Mapa</a>
+    <a href="tel:+3810643675742">Poziv</a>
+    <a href="viber://chat?number=%2B3810643675742">Viber</a>
+    <a href="https://www.instagram.com/ni.kola1380/" target="_blank">Instagram</a>
+    <a href="https://maps.google.com/?q=Vladimira+Pavlovica+12A+Obrenovac+Brovic" target="_blank">Mapa</a>
   </div>
 </footer>
 
