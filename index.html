@@ -144,6 +144,13 @@ nav.scrolled{padding:10px 5%;box-shadow:0 4px 40px rgba(0,0,0,.6)}
 }
 .btn-outline:hover{background:rgba(56,189,248,.1);transform:translateY(-3px);border-color:rgba(56,189,248,.65)}
 .btn-outline:active{transform:translateY(0)}
+.hero-img{
+  width:220px;height:220px;object-fit:contain;
+  margin-bottom:18px;
+  animation:fadeUp .6s both;
+  filter:drop-shadow(0 8px 32px rgba(56,189,248,.35));
+}
+@media(max-width:680px){.hero-img{width:160px;height:160px}}
 .scroll-ind{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;
   display:flex;flex-direction:column;align-items:center;gap:5px;
   color:var(--muted2);font-size:11px;letter-spacing:.5px;animation:scrollB 2s infinite}
@@ -286,8 +293,10 @@ footer{background:rgba(5,9,22,1);border-top:1px solid rgba(56,189,248,.07);paddi
 @media(max-width:680px){
   nav{padding:10px 4%}
   .nav-btns{display:none}
-  .hamburger{display:flex}
-  .mob-drawer{display:flex}
+  .hamburger{display:none}
+  .mob-drawer{display:none}
+  nav{justify-content:center}
+  .nav-logo{justify-content:center}
   .hero{padding:90px 5% 100px}
   .hero h1{font-size:1.9rem;letter-spacing:-.3px}
   .hero-sub{font-size:.9rem}
@@ -361,12 +370,12 @@ footer{background:rgba(5,9,22,1);border-top:1px solid rgba(56,189,248,.07);paddi
   <div class="hero-particles" id="particles"></div>
   <!-- Sadržaj -->
   <div class="hero-content">
+    <img src="hero.png" alt="Frigo Nidža majstor" class="hero-img"/>
     <div class="hero-badge">✓ Pouzdani od 2015. godine</div>
     <h1>Klima Uređaji &amp;<br><span>Rashladne Komore</span></h1>
     <p class="hero-sub">Prodaja, ugradnja i servis klima uređaja za stambene, poslovne i industrijske objekte. Rashladne komore po meri – brzo, stručno, sa garancijom.</p>
     <div class="hero-cta">
-      <a href="tel:+381643675742" class="btn-primary">📞 Pozovite odmah</a>
-      <a href="#usluge" class="btn-outline">Naše usluge ↓</a>
+      <a href="#usluge" class="btn-outline" style="background:#fff;border-color:transparent;color:#0d4fa0;font-weight:900;font-size:16px">NAŠE USLUGE <span style="font-size:22px;font-weight:900;line-height:1">↓</span></a>
     </div>
   </div>
   <div class="scroll-ind">▼ skrolujte</div>
